@@ -81,6 +81,6 @@ router.put('/users',function(req,res){
 app.use('/', router);
 app.use(morgan('dev'));
 app.use(express.static(__dirname +'/public'));
-app.listen(3000, function(){
-  console.log('Listening on port 3000');
+app.listen(process.env.PORT || 5000, function(){
+  console.log('Listening on port '+process.env.PORT);
 });
