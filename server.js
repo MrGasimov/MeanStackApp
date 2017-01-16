@@ -9,9 +9,9 @@ var app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
-var db = "mongodb://suliyo:fadesa1526@ds111549.mlab.com:11549/testrepository";
+//var db = "process.env.MONGODB_URI";
 
-mongoose.connect(db, function(err, db){
+mongoose.connect(process.env.MONGODB_URI, function(err, db){
 	if(err){
 		console.log("failed to connect to database");
 	}else{
