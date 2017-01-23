@@ -2,10 +2,10 @@
 
   <div class="container users-container">
     <h1 style="text-align:center;">{{vm.title}}</h1>
-    <table class="table table-bordered table-striped table-hovered" ng-hide="vm.detailed">
+    <table class="table table-bordered table-striped table-hovered" ng-hide="vm.detailed" style="table-layout:fixed;">
       <th>Name</th>
       <th>Age</th>
-      <th>Actions</th>
+      <th style="width:200px">Actions</th>
       <tr ng-repeat="user in vm.users">
           <td style="cursor:pointer;" ng-if="!editing" ng-click="vm.showDetails(user)">{{user.name}} </td>
           <td style="cursor:pointer;"  ng-if="!editing" ng-click="vm.showDetails(user)">{{user.age}} </td>
